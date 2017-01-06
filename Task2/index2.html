@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <title>js11-12/Task-2</title>
+          <link rel="stylesheet" href="css/myStyle.css">
+          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="js/tmpl.js"></script>
+          <script src="js/script.js"></script>
+
+  </head>
+
+  <body>
+      <script type="text/html" id="profile">
+        <div class="conteiner">
+
+          <div class="nickname">
+            <h1><%= data[0].name%></h1>
+            <img src="<%= data[0].src %>">
+            <p class="work"><%= data[0].work%></p>
+          </div>
+            <hr>
+
+          <div class="learning">
+            <h2><%= data[0].lerning[0].title%></h2>
+             <ul>
+               <% for (var i = 0; i < data[0].lerning[0].content.length; i++) { %>
+                   <li><%= data[0].lerning[0].content[i].title %></li>
+               <% } %>
+            </ul>
+          </div>
+             <hr>
+
+           <div class="contact">
+             <h2><%= data[0].contact%></h2>
+              <p><%= data[0].phone%></p>
+           </div>
+          <div class="account">
+            <h2><%= data[0].fb%></h2>
+            <p><a href="<%= data[0].account%>"
+              target="_blank">facebook.com</a></p>
+          </div>
+              <hr>
+          <div class="feedback">
+            <h2><%= data[0].myfeedback%></h2>
+            <p><%= data[0].feedback%></p>
+          </div>
+
+      </div>
+
+      </script>
+  </body>
+</html>
